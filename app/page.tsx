@@ -1,12 +1,13 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import Hero from "@/components/section/Hero";
 
 export default function Home() {
   return (
     <main>
-      <Header/>
-      <h1>Home</h1>
-      <Footer/>
+      <Header />
+      <Hero />
+      <Footer />
     </main>
   );
 }

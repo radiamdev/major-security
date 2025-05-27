@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+html,
+body {
+  @apply overflow-x-hidden;
 }
 
 @theme inline {
@@ -10,5 +18,5 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-manrope: "Manrope", sans-serif;
 }
-
