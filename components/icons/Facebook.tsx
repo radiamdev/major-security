@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Facebook({ className }: { className: string }) {
+function Facebook({ className }: { className?: string }) {
   return (
     <svg className={className} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
       <rect width="32" height="32" fill="#0F0F0F" />
