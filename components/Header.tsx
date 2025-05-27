@@ -13,7 +13,7 @@ const Header = () => {
     <div className='w-screen h-fit fixed top-0 left-0 bg-foreground' >
       <Container tag='header' className='bg-foreground text-white pb-4 flex flex-col gap-5 xl:gap-10' >
         <div className='w-full flex justify-between items-center' >
-          <Logo />
+          <Logo className='w-[60px] md:w-[70px]' />
           <div className='flex items-center justify-center gap-[22px]' >
             <div className='flex items-center gap-3 hover:text-primary hover:cursor-pointer transition-colors duration-300' >
               <Icon name='phone' />
@@ -40,7 +40,7 @@ const Header = () => {
             }
           </ul>
           <Menu isClicked={isNavDisplayed} onClick={() => setIsNavDisplayed(!isNavDisplayed)} />
-          <ul className='flex items-center justify-center gap-5 text-sm' >
+          <ul className='flex items-center justify-center gap-3 md:gap-5 text-sm' >
             {
               headerSocialMediaLink.map((link, id) => (
                 <li key={id}>
