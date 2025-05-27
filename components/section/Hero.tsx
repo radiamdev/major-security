@@ -1,25 +1,35 @@
 import Image from "next/image"
+import Container from "../common/Container"
+import Icon from "../icons"
+import Button from "../common/Button"
 
 function Hero() {
   return (
-    <div className="w-screen max-w-[1440px] min-h-[100vh] bg-[#09161EED] text-white grid grid-cols-2 justify-items-center" >
-      <div className="flex flex-col justify-between" >
-        <h1 className="text-8xl max-w-[550px] font-semibold font-manrope flex flex-col gap-5" >
-          <p className="text-base font-normal" >Sécurité, Surveillance & Gardiennage</p>
-          MAJOR SECURITY
-        </h1>
-        <div>
-          <div>
-            <span>play</span>
-            <span>Nos Services</span>
+    <div className="no-scroll-bar w-screen bg-[#09161EED] mt-[160px] cl:mt-[190px] p-10 " >
+      <Container className="no-scroll-bar min-h-[70vh] text-white flex flex-col lg:flex-row pb-10 " >
+        <div className=" w-full flex flex-col justify-center gap-10 xl:gap-40" >
+          <h1 className="w-full items-start text-5xl md:text-8xl max-w-[550px] font-semibold font-manrope flex flex-col gap-5" >
+            <p className="text-base font-normal" >Sécurité, Surveillance & Gardiennage</p>
+            MAJOR SECURITY
+          </h1>
+          <div className="flex flex-col max-w-[388px] gap-5 " >
+            <div className="flex place-items-end h-[92px] " >
+              <span className=" h-full flex items-center justify-center px-5 bg-[#B6B7B6] " > <Icon className="text-white" name="play" /></span>
+              <span className=" h-full flex items-center justify-center px-10 bg-[#2A2A2A]" >Nos Services</span>
+            </div>
+            <p className="w-fit" >Notre mission est simple : garantir la sécurité de votre entreprise, de vos biens et de vos événements, peu importe leur taille ou leur complexité.</p>
           </div>
-          <p>Notre mission est simple : garantir la sécurité de votre entreprise, de vos biens et de vos événements, peu importe leur taille ou leur complexité.</p>
         </div>
-      </div>
 
-      <div>
-        <Image alt="hero image" src={"/image/hero-image.png"} width={450} height={600} />
-      </div>
+        <div className="flex flex-col place-items-end gap-5" >
+          <Image alt="hero image" src={"/image/hero-image.png"} className="w-[600px] h-auto " width={450} height={600} />
+          <div className="w-full flex flex-col justify-center items-center gap-5" >
+            <p className="font-bold text-2xl text-center">Protéger ce qui compte <br /> vraiment .</p>
+            <Button label="Contacter Nous" />
+          </div>
+        </div>
+        <Image alt="shied image" src={'/image/hero-shield.png'} width={500} height={650} className="absolute z-10 left-[50%] translate-x-[-50%] top-[40%] hidden xl:block " />
+      </Container>
     </div>
   )
 }

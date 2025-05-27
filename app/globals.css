@@ -22,3 +22,8 @@ body {
   --font-mono: var(--font-geist-mono);
   --font-manrope: "Manrope", sans-serif;
 }
+
+.no-scroll-bar::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
