@@ -10,7 +10,7 @@ interface ContainerProps {
 export default function Container(props: ContainerProps) {
   const { children, tag = "section", className = "" } = props;
   const Tag = tag;
-  return <Tag className={` mx-auto w-full h-fit relative max-w-[1440px] px-5 md:px-7 xl:px-12 ${className}`}>
+  return <Tag className={` mx-auto w-full h-fit relative max-w-[1440px] px-5 md:px-7 xl:px-20 ${className}`}>
     {children}
   </Tag>;
 }

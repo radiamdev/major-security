@@ -2,8 +2,8 @@ import React from 'react'
 
 function Facebook({ className }: { className?: string }) {
   return (
-    <svg className={className} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-      <rect width="32" height="32" fill="#0F0F0F" />
+    <svg className={className} width="32" height="32" viewBox="0 0 32 32" fill="" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+      <rect width="32" height="32" fill="currentColor" />
       <rect x="11" y="7" width="19" height="19" fill="url(#pattern0_90_6653)" />
       <defs>
         <pattern id="pattern0_90_6653" patternContentUnits="objectBoundingBox" width="1" height="1">
