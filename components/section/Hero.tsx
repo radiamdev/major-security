@@ -2,6 +2,7 @@ import Image from "next/image"
 import Container from "../common/Container"
 import Icon from "../icons"
 import Button from "../common/Button"
+import Link from "next/link"
 
 function Hero() {
   return (
@@ -25,7 +26,7 @@ function Hero() {
           <Image alt="hero image" src={"/image/hero-image.png"} className="w-[600px] h-auto " width={450} height={600} />
           <div className="w-full flex flex-col justify-center items-center gap-5" >
             <p className="font-bold text-2xl text-center">Protéger ce qui compte <br /> vraiment .</p>
-            <Button label="Contacter Nous" />
+            <Link href={'/contact'}> <Button label="Contacter Nous" /></Link>
           </div>
         </div>
         <Image alt="shied image" src={'/image/hero-shield.png'} width={500} height={650} className="absolute z-10 left-[50%] translate-x-[-50%] top-[40%] hidden xl:block " />
