@@ -11,7 +11,7 @@ const Header = () => {
   const [isNavDisplayed, setIsNavDisplayed] = useState<boolean>(false)
   return (
     <div className='w-screen h-fit fixed top-0 left-0 bg-foreground' >
-      <Container tag='header' className='bg-foreground text-white pb-4 flex flex-col gap-5 xl:gap-10' >
+      <Container tag='header' className='bg-foreground text-white pb-4 flex flex-col gap-2 md:gap-5 xl:gap-10' >
         <div className='w-full flex justify-between items-center' >
           <Logo className='w-[60px] md:w-[70px]' />
           <div className='flex items-center justify-center gap-[22px]' >
