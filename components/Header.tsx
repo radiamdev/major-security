@@ -1,10 +1,11 @@
 'use client'
+import Link from 'next/link'
 import React, { useRef, useState } from 'react'
+
 import Container from './common/Container'
 import Logo from './icons/Logo'
 import Icon from './icons'
 import { headerPageLink, headerSocialMediaLink } from '@/app/data.global'
-import Link from 'next/link'
 import Menu from './icons/Menu'
 import { useClickOutSide } from '@/hooks/useClickOutSide'
 
@@ -12,6 +13,7 @@ const Header = () => {
   const [isNavDisplayed, setIsNavDisplayed] = useState<boolean>(false)
   const navigationRef = useRef<HTMLDivElement | null>(null)
   useClickOutSide(navigationRef, () => setIsNavDisplayed(false))
+
   return (
     <div className='w-screen h-fit fixed top-0 left-0 bg-foreground z-50 ' >
       <Container tag='header' className='bg-foreground text-white pb-4 flex flex-col gap-2 md:gap-5 xl:gap-10' >

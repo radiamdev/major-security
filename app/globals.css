@@ -14,16 +14,24 @@ body {
   @apply overflow-x-hidden;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-manrope: "Manrope", sans-serif;
+  --animate-bouncing: bouncing-shield 2s linear infinite;
 }
 
-.no-scroll-bar::-webkit-scrollbar {
-  width: 0;
-  background-color: transparent;
+@keyframes bouncing-shield {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

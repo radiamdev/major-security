@@ -3,11 +3,11 @@ import { HeaderLinkType, SocialMediaLink } from "@/type";
 export const headerPageLink: HeaderLinkType[] = [
   {
     label: "A propos de nous ",
-    href: "/about",
+    href: "#about",
   },
   {
     label: "Nos services",
-    href: "/service",
+    href: "#service",
   },
   {
     label: "Pourquoi nous",
@@ -15,7 +15,7 @@ export const headerPageLink: HeaderLinkType[] = [
   },
   {
     label: "Contact",
-    href: "/contact",
+    href: "#contact",
   },
 ];
 
