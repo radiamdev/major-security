@@ -1,5 +1,8 @@
 @import 'tailwindcss';
 
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
 :root {
     --background: #ffffff;
     --foreground: #171717;
@@ -8,12 +11,32 @@
     --gray-primary: #d9d9d9;
 }
 
-@theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --color-primary: var(--primary);
-    --color-blue-primary: var(--blue-primary);
-    --color-gray-primary: var(--gray-primary);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
+html,
+body {
+  @apply overflow-x-hidden scroll-smooth;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-blue-primary: var(--blue-primary);
+  --color-gray-primary: var(--gray-primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-manrope: "Manrope", sans-serif;
+  --animate-bouncing: bouncing-shield 2.5s linear infinite;
+}
+
+@keyframes bouncing-shield {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+    
 }
