@@ -7,8 +7,6 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
-      <div className="h-screen " ></div>
-
       <Footer />
     </main>
   );
