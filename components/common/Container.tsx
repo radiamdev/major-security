@@ -1,4 +1,3 @@
-
 // this component is used to wrap content in a container with a common className in order to maintain consistent styling across the application
 
 interface ContainerProps {
