@@ -27,7 +27,7 @@ function Hero() {
         <div className="flex flex-col place-items-end gap-5" >
           <Image
             alt="hero image"
-            src={"/image/hero-image.png"}
+            src={"/images/hero-image.png"}
             className="w-[600px] h-auto "
             width={450}
             height={600}
@@ -40,7 +40,7 @@ function Hero() {
         </div>
         <Image
           alt="shied image"
-          src={'/image/hero-shield.png'}
+          src={'/images/hero-shield.png'}
           width={500}
           height={650}
           className="animate-bouncing absolute z-10 left-[50%] translate-x-[-50%] top-[40%] hidden xl:block "
