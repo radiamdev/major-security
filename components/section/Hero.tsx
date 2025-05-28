@@ -6,8 +6,8 @@ import Link from "next/link"
 
 function Hero() {
   return (
-    <div className="no-scroll-bar w-screen bg-[#09161EED] mt-[160px] cl:mt-[190px] p-10 " >
-      <Container data-section id="home" className="no-scroll-bar min-h-[70vh] text-white flex flex-col lg:flex-row pb-10 " >
+    <div id="home" className=" w-screen bg-[#09161EED] pt-[160px] xl:pt-[190px] pb-10 " >
+      <Container data-section className=" min-h-[70vh] text-white flex flex-col lg:flex-row pb-10 " >
         <div className=" w-full flex flex-col justify-center gap-10 xl:gap-40" >
           <h1 className="w-full items-start text-5xl md:text-8xl max-w-[550px] font-semibold font-manrope flex flex-col gap-5" >
             <p className="text-base font-normal" >Sécurité, Surveillance & Gardiennage</p>
@@ -35,7 +35,7 @@ function Hero() {
           />
           <div className="w-full flex flex-col justify-center items-center gap-5" >
             <p className="font-bold text-2xl text-center">Protéger ce qui compte <br /> vraiment .</p>
-            <Link href={'/contact'}> <Button label="Contacter Nous" /></Link>
+            <Link href={'/contact'}> <Button label="Contactez Nous" /></Link>
           </div>
         </div>
         <Image

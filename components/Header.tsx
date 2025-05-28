@@ -51,7 +51,7 @@ const Header = () => {
             {
               headerSocialMediaLink.map((link, id) => (
                 <li key={id}>
-                  <Link href={link.href} className='text-black hover:text-primary/60 transition-colors'> <Icon name={link.iconName} /> </Link>
+                  <Link href={link.href} target='_blank' className='text-black hover:text-primary/60 transition-colors'> <Icon name={link.iconName} /> </Link>
                 </li>
               ))
             }

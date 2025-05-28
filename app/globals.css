@@ -11,7 +11,7 @@
 
 html,
 body {
-  @apply overflow-x-hidden;
+  @apply overflow-x-hidden scroll-smooth;
 }
 
 @theme {
@@ -21,7 +21,7 @@ body {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-manrope: "Manrope", sans-serif;
-  --animate-bouncing: bouncing-shield 2s linear infinite;
+  --animate-bouncing: bouncing-shield 2.5s linear infinite;
 }
 
 @keyframes bouncing-shield {
