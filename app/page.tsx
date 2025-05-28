@@ -1,12 +1,14 @@
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
+import ContactUs from '@/components/section/ContactUs'
+import Hero from '@/components/section/Hero'
 
 export default function Home() {
     return (
         <main>
             <Header />
-            <h1>Home</h1>
-            <div className="h-80 bg-amber-500"></div>
+            <Hero />
+            <ContactUs />
             <Footer />
         </main>
     )

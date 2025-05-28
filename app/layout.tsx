@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     description: 'Major security website',
 }
 
+
 export default function RootLayout({
     children,
 }: Readonly<{

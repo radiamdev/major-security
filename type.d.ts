@@ -11,3 +11,11 @@ export interface SocialMediaLink {
     iconName: keyof IconType
     href: string
 }
+interface ButtonProps {
+  label: string;
+  icon?: keyof IconType;
+  iconVariant?: IconVariant;
+  className?: string;
+  type?: "submit" | "button";
+  onClick?: () => void;
+}
