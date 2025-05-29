@@ -5,7 +5,7 @@ import Link from "next/link"
 
 function Hero() {
   return (
-    <div id="home" className=" w-screen bg-[#09161EED] pt-[160px] xl:pt-[190px] pb-10 " >
+    <div id="home" className=" w-screen bg-[#09161EED] pt-[160px] md:pt-[180px] xl:pt-[190px] pb-10 " >
       <Container tag="section" className=" min-h-[70vh] text-white flex flex-col lg:flex-row pb-10 " >
         <div className=" w-full flex flex-col justify-center gap-10 xl:gap-40" >
           <h1 className="w-full items-start text-5xl md:text-8xl max-w-[550px] font-semibold font-manrope flex flex-col gap-5" >

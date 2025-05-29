@@ -28,7 +28,7 @@ export default function AboutUS() {
                                 Chez MAJOR SECURITY, notre objectif est de
                                 garantir la sécurité de votre entreprise, quelle
                                 que soit sa taille. Nous mettons à votre
-                                disposition une équipe d’agents formés,
+                                disposition une équipe d&apos;agents formés,
                                 qualifiés et expérimentés, capables de répondre
                                 à tous vos besoins en matière de sécurité et de
                                 contrôle.
