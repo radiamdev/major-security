@@ -44,7 +44,7 @@ const FooterContent = () => {
                     {contactInfo.map((item) => (
                         <li
                             key={item}
-                            className="text-white hover:text-primary transition-colors duration-300"
+                            className="text-white"
                         >
                             {item}
                         </li>
