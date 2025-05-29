@@ -6,7 +6,7 @@ import Link from "next/link"
 function Hero() {
   return (
     <div id="home" className=" w-screen bg-[#09161EED] pt-[160px] xl:pt-[190px] pb-10 " >
-      <Container data-section className=" min-h-[70vh] text-white flex flex-col lg:flex-row pb-10 " >
+      <Container tag="section" className=" min-h-[70vh] text-white flex flex-col lg:flex-row pb-10 " >
         <div className=" w-full flex flex-col justify-center gap-10 xl:gap-40" >
           <h1 className="w-full items-start text-5xl md:text-8xl max-w-[550px] font-semibold font-manrope flex flex-col gap-5" >
             <p className="text-base font-normal" >Sécurité, Surveillance & Gardiennage</p>
@@ -36,8 +36,8 @@ function Hero() {
         </div>
         <img
           alt="shied image"
-          src={'/image/hero-shield.png'}
-          className="animate-bouncing absolute z-10 left-[50%] translate-x-[-50%] top-[40%] w-[600px] h-auto hidden xl:block "
+          src={'/images/hero-shield.png'}
+          className="animate-bouncing absolute z-10 left-[50%] translate-x-[-50%] top-[40%] w-[500px] h-auto hidden xl:block "
         />
       </Container>
     </div>
