@@ -8,6 +8,7 @@ import Icon from './icons'
 import { headerPageLink, headerSocialMediaLink } from '@/app/data.global'
 import Menu from './icons/Menu'
 import { useClickOutSide } from '@/hooks/useClickOutSide'
+import Infos from './display/Infos'
 
 const Header = () => {
   const [isNavDisplayed, setIsNavDisplayed] = useState<boolean>(false)
@@ -20,26 +21,20 @@ const Header = () => {
         tag="header"
         className="bg-foreground text-white pb-4 flex flex-col gap-2 md:gap-5 xl:gap-10"
       >
-        <div className="w-full flex justify-between items-center">
+        <div className="w-full flex justify-between items-center border-b border-b-[#2A2A2A] ">
           <Logo className="w-[60px] md:w-[70px]" />
           <div className="flex items-center justify-center gap-[22px]">
-            <Link href={'https://wa.me/33123456789'} target='_blank' >
-              <div className="flex items-center gap-3 hover:text-primary hover:cursor-pointer transition-colors duration-300">
-                <Icon name="phone" />
-                <p className="hidden md:block">
-                  +33 1 23 45 67 89
-                </p>
-              </div>
-            </Link>
+            <Infos
+              label='+33 1 23 45 67 89'
+              href='https://wa.me/33123456789'
+              iconName='phone'
+            />
             <span className="h-4 w-0.5 bg-white"></span>
-            <Link href={'mailto:contact@majorsecurity.com'} target='_blank' >
-              <div className="flex items-center gap-3 hover:text-primary hover:cursor-pointer transition-colors duration-300">
-                <Icon name="mail" />
-                <p className="hidden md:block">
-                  contact@majorsecurity.com
-                </p>
-              </div>
-            </Link>
+            <Infos
+              label='contact@majorsecurity.com'
+              href='mailto:contact@majorsecurity.com'
+              iconName='mail'
+            />
           </div>
         </div>
 
