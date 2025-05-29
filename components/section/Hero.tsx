@@ -26,7 +26,7 @@ function Hero() {
         <div className="flex flex-col place-items-end gap-5" >
           <img
             alt="hero image"
-            src={"/image/hero-image.png"}
+            src={"/images/hero-image.png"}
             className="w-[600px] h-auto "
           />
           <div className="w-full flex flex-col justify-center items-center gap-5" >

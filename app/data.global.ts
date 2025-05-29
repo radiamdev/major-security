@@ -1,4 +1,4 @@
-import { HeaderLinkType, SocialMediaLink } from "@/type";
+import { HeaderLinkType, SocialMediaLink } from '@/type'
 
 export const headerPageLink: HeaderLinkType[] = [
   {
@@ -24,16 +24,16 @@ export const headerPageLink: HeaderLinkType[] = [
 ];
 
 export const headerSocialMediaLink: SocialMediaLink[] = [
-  {
-    iconName: "twitter",
-    href: "#",
-  },
-  {
-    iconName: "instagram",
-    href: "#",
-  },
-  {
-    iconName: "facebook",
-    href: "#",
-  },
-];
+    {
+        iconName: 'twitter',
+        href: '#',
+    },
+    {
+        iconName: 'instagram',
+        href: '#',
+    },
+    {
+        iconName: 'facebook',
+        href: '#',
+    },
+]
