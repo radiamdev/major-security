@@ -39,7 +39,9 @@ const avantages = [
 
 export default function WhyPage() {
   return (
-    <section className="py-16 px-4 max-w-7xl mx-auto">
+    
+    
+    <div className="py-16 px-4 max-w-7xl mx-auto">
       <p className="text-sm text-gray-500 mb-2 text-center md:text-left">Pourquoi nous ?</p>
       <h2 className="text-3xl font-bold mb-10 text-center md:text-left">Pourquoi nous choisir ?</h2>
 
@@ -54,6 +56,6 @@ export default function WhyPage() {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
