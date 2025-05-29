@@ -1,13 +1,17 @@
-import { HeaderLinkType, SocialMediaLink } from "@/type";
+import { HeaderLinkType, SocialMediaLink } from '@/type'
 
 export const headerPageLink: HeaderLinkType[] = [
   {
+    label: "Accueil",
+    href: "#home",
+  },
+  {
     label: "A propos de nous ",
-    href: "/about",
+    href: "#about",
   },
   {
     label: "Nos services",
-    href: "/service",
+    href: "#service",
   },
   {
     label: "Pourquoi nous",
@@ -15,21 +19,21 @@ export const headerPageLink: HeaderLinkType[] = [
   },
   {
     label: "Contact",
-    href: "/contact",
+    href: "#contact",
   },
 ];
 
 export const headerSocialMediaLink: SocialMediaLink[] = [
-  {
-    iconName: "twitter",
-    href: "#",
-  },
-  {
-    iconName: "instagram",
-    href: "#",
-  },
-  {
-    iconName: "facebook",
-    href: "#",
-  },
-];
+    {
+        iconName: 'twitter',
+        href: '#',
+    },
+    {
+        iconName: 'instagram',
+        href: '#',
+    },
+    {
+        iconName: 'facebook',
+        href: '#',
+    },
+]
