@@ -1,5 +1,4 @@
-import Container from "@/components/common/Container";
-
+import Container from "../common/Container";
 const services = [
   {
     title: "Gardiennage de chantier",
@@ -33,10 +32,8 @@ const services = [
 
 export default function ServicePage() {
   return (
-            <Container
-                tag="section"
-                id="#service"
-            >
+    
+    
     <main className="bg-[#09161E17] text-black px-6 md:px-20 py-16">
       <p className="text-sm text-gray-500">Nos services</p>
 
@@ -76,6 +73,5 @@ export default function ServicePage() {
         ))}
       </div>
     </main>
-    </Container>
   );
 }
