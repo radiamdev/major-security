@@ -1,4 +1,3 @@
-import Image from "next/image"
 import Container from "../common/Container"
 import Icon from "../icons"
 import Button from "../common/Button"
@@ -25,25 +24,20 @@ function Hero() {
         </div>
 
         <div className="flex flex-col place-items-end gap-5" >
-          <Image
+          <img
             alt="hero image"
             src={"/image/hero-image.png"}
             className="w-[600px] h-auto "
-            width={450}
-            height={600}
-            priority
           />
           <div className="w-full flex flex-col justify-center items-center gap-5" >
             <p className="font-bold text-2xl text-center">Protéger ce qui compte <br /> vraiment .</p>
             <Link href={'/contact'}> <Button label="Contactez Nous" /></Link>
           </div>
         </div>
-        <Image
+        <img
           alt="shied image"
           src={'/image/hero-shield.png'}
-          width={500}
-          height={650}
-          className="animate-bouncing absolute z-10 left-[50%] translate-x-[-50%] top-[40%] hidden xl:block "
+          className="animate-bouncing absolute z-10 left-[50%] translate-x-[-50%] top-[40%] w-[600px] h-auto hidden xl:block "
         />
       </Container>
     </div>
