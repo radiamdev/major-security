@@ -15,7 +15,7 @@ export const headerPageLink: HeaderLinkType[] = [
   },
   {
     label: "Pourquoi nous",
-    href: "#",
+    href: "#why",
   },
   {
     label: "Contact",

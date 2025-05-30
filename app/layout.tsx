@@ -8,9 +8,27 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-    title: 'Major Security',
-    description: 'Major security website',
-}
+    title: "Major Security | Sécurité pour entreprises, biens et événements",
+    description:
+        "Notre mission est simple : garantir la sécurité de votre entreprise, de vos biens et de vos événements, peu importe leur taille ou leur complexité.",
+    keywords: [
+        "sécurité",
+        "entreprise",
+        "événement",
+        "protection",
+        "gardiennage",
+        "surveillance",
+        "agents de sécurité",
+        "sécurité privée",
+        "Major Security"
+    ],
+    icons: {
+        icon: "/favicon.ico",
+    },
+    authors: [{ name: "Major Security" }],
+    creator: "Major Security",
+};
+
 
 
 export default function RootLayout({
