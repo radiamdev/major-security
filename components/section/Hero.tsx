@@ -31,7 +31,7 @@ function Hero() {
           />
           <div className="w-full flex flex-col justify-center items-center gap-5" >
             <p className="font-bold text-2xl text-center">Protéger ce qui compte <br /> vraiment .</p>
-            <Link href={'/contact'}> <Button label="Contactez Nous" /></Link>
+            <Link href={'#contact'}> <Button label="Contactez Nous" /></Link>
           </div>
         </div>
         <img
