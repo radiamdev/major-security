@@ -16,7 +16,7 @@ const Header = () => {
   useClickOutSide(navigationRef, () => setIsNavDisplayed(false))
 
   return (
-    <div className="w-screen h-fit fixed top-0 left-0 lg:static bg-foreground z-50 ">
+    <div className="w-screen h-fit fixed top-0 left-0 bg-foreground z-50 ">
       <Container
         tag="header"
         className="bg-foreground text-white pb-4 flex flex-col gap-2 md:gap-5 xl:gap-10"
