@@ -2,11 +2,11 @@ import Container from '../common/Container'
 
 export default function AboutUS() {
     return (
-        <div className="w-screen h-fit bg-gray-primary">
+        <div className="w-screen h-fit ">
             <Container
                 tag="section"
                 id="about"
-                className="bg-gray-primary pt-16"
+                className=" pt-16"
             >
                 <section className="about-us px-6 lg:px-20">
                     <div className="about-us-one flex flex-col lg:flex-row-reverse items-center justify-between">
