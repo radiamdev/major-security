@@ -7,7 +7,7 @@ import clsx from 'clsx'
 
 const ContactUs = () => {
     return (
-        <div className='w-screen h-fit bg-gray-primary' >
+        <div className="w-screen h-fit bg-gray-primary">
             <Container
                 tag="section"
                 id="contact"
@@ -24,7 +24,9 @@ const ContactUs = () => {
                     <div className="lg:w-1/2 w-full">
                         <div className="space-y-4 text-center lg:text-left">
                             <p className="text-white">Contact</p>
-                            <h1 className="text-white text-3xl">Contactez nous</h1>
+                            <h1 className="text-white text-3xl">
+                                Contactez nous
+                            </h1>
                             <p className="text-white leading-8">
                                 Besoin d&apos;un plan de sécurité personnalisé ?{' '}
                                 <br />
