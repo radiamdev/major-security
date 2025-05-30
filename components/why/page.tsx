@@ -1,3 +1,4 @@
+import Container from "../common/Container";
 const avantages = [
   {
     icon: "/photos/Icon.png",
@@ -39,6 +40,13 @@ const avantages = [
 
 export default function WhyPage() {
   return (
+    <div>
+        
+                <Container
+                    tag="section"
+                    id="#why"
+                    className=" py-16"
+                >
     
     
     <div className="py-16 px-4 max-w-7xl mx-auto">
@@ -56,6 +64,8 @@ export default function WhyPage() {
           </div>
         ))}
       </div>
+    </div>
+    </Container>
     </div>
   );
 }

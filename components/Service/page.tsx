@@ -32,9 +32,14 @@ const services = [
 
 export default function ServicePage() {
   return (
+    <div className="bg-gray-primary">
     
-    
-    <main className="bg-[#09161E17] text-black px-6 md:px-20 py-16">
+            <Container
+                tag="section"
+                id="#service"
+                className="bg-gray-primary py-16"
+            >
+    <div className=" text-black px-6 md:px-20 py-16">
       <p className="text-sm text-gray-500">Nos services</p>
 
       <div className="flex flex-col md:flex-row md:justify-between gap-6 mb-12">
@@ -72,6 +77,8 @@ export default function ServicePage() {
           </div>
         ))}
       </div>
-    </main>
+    </div>
+    </Container>
+    </div>
   );
 }
