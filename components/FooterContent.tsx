@@ -5,7 +5,7 @@ import Logo from './icons/Logo'
 
 const contactInfo = [
     '📍 12 Rue de la Sécurité, 75000 Paris, France',
-    '📞 +33 1 23 45 67 89',
+    '📞 +261 37 79 118 84',
     '✉️ contact@majorsecurity.com',
     '🕒 Disponible 24h/24 – 7j/7',
 ]
