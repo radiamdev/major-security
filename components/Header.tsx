@@ -4,10 +4,10 @@ import React, { useRef, useState } from 'react'
 
 import Container from './common/Container'
 import Logo from './icons/Logo'
-import { headerPageLink, headerSocialMediaLink } from '@/app/data.global'
 import Menu from './icons/Menu'
 import { useClickOutSide } from '@/hooks/useClickOutSide'
 import Infos from './display/Infos'
+import { headerPageLink, headerSocialMediaLink } from '@/constants'
 
 const Header = () => {
     const [isNavDisplayed, setIsNavDisplayed] = useState<boolean>(false)

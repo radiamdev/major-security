@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
+import { Bounce, ToastContainer } from 'react-toastify'
 
 const poppins = Poppins({
     weight: '400',
@@ -8,28 +9,26 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-    title: "Major Security | Sécurité pour entreprises, biens et événements",
+    title: 'Major Security | Sécurité pour entreprises, biens et événements',
     description:
-        "Notre mission est simple : garantir la sécurité de votre entreprise, de vos biens et de vos événements, peu importe leur taille ou leur complexité.",
+        'Notre mission est simple : garantir la sécurité de votre entreprise, de vos biens et de vos événements, peu importe leur taille ou leur complexité.',
     keywords: [
-        "sécurité",
-        "entreprise",
-        "événement",
-        "protection",
-        "gardiennage",
-        "surveillance",
-        "agents de sécurité",
-        "sécurité privée",
-        "Major Security"
+        'sécurité',
+        'entreprise',
+        'événement',
+        'protection',
+        'gardiennage',
+        'surveillance',
+        'agents de sécurité',
+        'sécurité privée',
+        'Major Security',
     ],
     icons: {
-        icon: "/favicon.ico",
+        icon: '/favicon.ico',
     },
-    authors: [{ name: "Major Security" }],
-    creator: "Major Security",
-};
-
-
+    authors: [{ name: 'Major Security' }],
+    creator: 'Major Security',
+}
 
 export default function RootLayout({
     children,
@@ -40,6 +39,19 @@ export default function RootLayout({
         <html lang="fr-FR">
             <body className={`${poppins.className} antialiased`}>
                 {children}
+                <ToastContainer
+                    position="bottom-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick={false}
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                    transition={Bounce}
+                />
             </body>
         </html>
     )

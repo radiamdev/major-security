@@ -1,0 +1,23 @@
+[
+    {
+        "id": "recrutement-agents",
+        "title": "Recrutement d’agents de sécurité",
+        "date": "2025-05-25",
+        "summary": "Nous recrutons 5 agents de sécurité pour un nouveau site à Antananarivo.",
+        "content": "Dans le cadre de l’expansion de nos activités, nous recrutons 5 agents de sécurité expérimentés pour assurer la surveillance d’un site gouvernemental à Antananarivo. Les candidatures sont à envoyer avant le 15 juin 2025."
+    },
+    {
+        "id": "seminaire-annuel",
+        "title": "Séminaire annuel des chefs d’équipe",
+        "date": "2025-05-10",
+        "summary": "Un séminaire stratégique a été organisé pour nos chefs d’équipe régionaux.",
+        "content": "Le séminaire annuel 2025 s’est tenu à Nosy Be pour renforcer la coordination entre les équipes terrain et la direction générale. \nPlusieurs thématiques comme la cybersécurité et la gestion de crise ont été abordées."
+    },
+    {
+        "id": "nouveau-contrat-banque",
+        "title": "Signature d’un contrat avec la BFM",
+        "date": "2025-04-15",
+        "summary": "L’entreprise assurera désormais la sécurité de 12 agences BFM dans tout Madagascar.",
+        "content": "Notre agence a signé un contrat avec la Banque Financière de Madagascar (BFM) pour assurer la sécurité physique et électronique de 12 de ses agences réparties sur l’ensemble du territoire."
+    }
+]
