@@ -2,8 +2,8 @@ import { Button, Field, Input } from '@headlessui/react'
 import clsx from 'clsx'
 import Container from './common/Container'
 import Link from 'next/link'
-import { headerSocialMediaLink } from '@/app/data.global'
 import FooterContent from './FooterContent'
+import { headerSocialMediaLink } from '@/constants'
 
 const Footer = () => {
     return (

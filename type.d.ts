@@ -5,7 +5,7 @@ import { IconType } from './components/icons'
 
 export interface HeaderLinkType {
     label: string
-    href: string
+    href: string 
 }
 
 // Type pour définir la structure d'un lien de média social

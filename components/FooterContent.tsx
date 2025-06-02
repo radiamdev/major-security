@@ -1,7 +1,7 @@
-import { headerPageLink } from '@/app/data.global'
 import Link from 'next/link'
 import React from 'react'
 import Logo from './icons/Logo'
+import { headerPageLink } from '@/constants'
 
 const contactInfo = [
     '📍 12 Rue de la Sécurité, 75000 Paris, France',
