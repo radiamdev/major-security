@@ -30,3 +30,10 @@ export interface InfosProps {
     href: string
     iconName: keyof IconType
 }
+
+export interface MailType {
+    name: string
+    email: string
+    subject?: string
+    message?: string
+}
