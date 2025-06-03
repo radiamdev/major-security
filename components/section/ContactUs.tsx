@@ -1,11 +1,18 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import Container from '../common/Container'
 import { images } from '@/constants'
 import Button from '../common/Button'
-import { Field, Input } from '@headlessui/react'
-import clsx from 'clsx'
+import { Input } from '@headlessui/react'
+import { Form, Formik } from 'formik'
+import { contactFormSchema } from '@/lib/validator'
+import { toast } from 'react-toastify'
+import { sendMail } from '@/lib/api/contact'
+import FormField from '../common/FormField'
 
 const ContactUs = () => {
+    const [isSubmitting, setIsSubmitting] = useState(false)
     return (
         <div className="w-screen h-fit bg-gray-primary">
             <Container
@@ -33,33 +40,106 @@ const ContactUs = () => {
                                 Parlons de vos besoins !
                             </p>
                         </div>
-                        <div className="py-6 flex flex-col items-center lg:items-start justify-center gap-6">
-                            <Field className="w-[90%] lg:w-[70%]">
-                                <Input
-                                    placeholder="Nom"
-                                    className={clsx(
-                                        'block w-full rounded-lg border-none bg-white px-3 py-1.5 text-sm/6 text-gray-900',
-                                        'focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25'
-                                    )}
-                                />
-                            </Field>
-                            <Field className="w-[90%] lg:w-[70%]">
-                                <Input
-                                    placeholder="Email"
-                                    className={clsx(
-                                        'block w-full rounded-lg border-none bg-white px-3 py-1.5 text-sm/6 text-gray-900',
-                                        'focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25'
-                                    )}
-                                />
-                            </Field>
-                            {/* Send button */}
-                            <div className="flex-1 lg:text-left text-center">
-                                <Button
-                                    label="Envoyer"
-                                    className="rounded-full !py-3 !px-8"
-                                />
-                            </div>
-                        </div>
+
+                        <Formik
+                            initialValues={{
+                                name: '',
+                                email: '',
+                                subject: '',
+                                message: '',
+                                honeypot: '', // anti-spam
+                            }}
+                            validationSchema={contactFormSchema}
+                            onSubmit={async (values, { resetForm }) => {
+                                console.log('Submit clicked', values)
+                                console.log('✅ Form values:', values)
+
+                                if (values.honeypot) {
+                                    toast.error("Erreur d'envoi")
+                                    return
+                                }
+
+                                setIsSubmitting(true)
+                                try {
+                                    console.log('⏳ Appel à sendMail...')
+
+                                    const response =
+                                        await sendMail(values).send()
+
+                                    console.log(
+                                        '✅ Réponse du serveur:',
+                                        response
+                                    )
+                                    toast.success(
+                                        'Your message has been sent successfully!'
+                                    )
+                                    resetForm()
+                                } catch (error) {
+                                    console.error(
+                                        '❌ Erreur de soumission:',
+                                        error
+                                    )
+                                    toast.error(
+                                        'Failed to send message. Please try again.'
+                                    )
+                                } finally {
+                                    setIsSubmitting(false)
+                                }
+                            }}
+                        >
+                            {({
+                                errors,
+                                touched,
+                                handleChange,
+                                values,
+                            }) => (
+                                <Form className="py-6 flex flex-col items-center lg:items-start justify-center gap-6">
+                                    <FormField
+                                        name="name"
+                                        placeholder="Nom"
+                                        touched={touched.name}
+                                        error={errors.name}
+                                    />
+                                    <FormField
+                                        name="email"
+                                        placeholder="Email"
+                                        touched={touched.email}
+                                        error={errors.email}
+                                    />
+                                    <FormField
+                                        name="subject"
+                                        placeholder="Sujet"
+                                        touched={touched.subject}
+                                        error={errors.subject}
+                                    />
+                                    <FormField
+                                        name="message"
+                                        placeholder="Message"
+                                        isTextarea
+                                        touched={touched.message}
+                                        error={errors.message}
+                                    />
+
+                                    {/* Anti-spam */}
+                                    <Input
+                                        type="text"
+                                        name="honeypot"
+                                        value={values.honeypot}
+                                        onChange={handleChange}
+                                        style={{ display: 'none' }}
+                                    />
+
+                                    {/* Send button */}
+                                    <div className="flex-1 lg:text-left text-center">
+                                        <Button
+                                            type="submit"
+                                            label={isSubmitting ? 'Envoi...' : 'Envoyer'}
+                                            className="rounded-full !py-3 !px-8"
+                                        />
+                                    </div>
+                                </Form>
+                            )}
+                        </Formik>
                     </div>
                 </div>
             </Container>

@@ -24,12 +24,12 @@ export const headerPageLink: HeaderLinkType[] = [
         href: '/#why',
     },
     {
-        label: 'Contact',
-        href: '/#contact',
-    },
-    {
         label: 'News',
         href: '/news',
+    },
+    {
+        label: 'Contact',
+        href: '/#contact',
     },
 ]
 

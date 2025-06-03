@@ -10,7 +10,7 @@ export default function NewsPage() {
             <Header />
             <Container tag="section" className="py-16 pb-24">
                 <h1 className="text-4xl font-bold mb-10">
-                    Actualités de l'agence
+                    Actualités de l&apos;agence
                 </h1>
                 <div className="grid md:grid-cols-2 gap-6">
                     {news.map((item) => (
