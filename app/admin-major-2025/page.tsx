@@ -158,7 +158,7 @@ export default function AdminPage() {
                     onClick={handleBackHome}
                     className="bg-primary text-blackf font-bold px-6 py-2 rounded hover:bg-amber-200 cursor-pointer"
                 >
-                    Revenir à la page d'accueil
+                    Revenir à la page d&apos;accueil
                 </button>
                 <button
                     onClick={handleDownload}

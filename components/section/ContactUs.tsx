@@ -4,8 +4,7 @@ import React, { useState } from 'react'
 import Container from '../common/Container'
 import { images } from '@/constants'
 import Button from '../common/Button'
-import { Field, Input, Textarea } from '@headlessui/react'
-import clsx from 'clsx'
+import { Input } from '@headlessui/react'
 import { Form, Formik } from 'formik'
 import { contactFormSchema } from '@/lib/validator'
 import { toast } from 'react-toastify'
@@ -134,7 +133,7 @@ const ContactUs = () => {
                                     <div className="flex-1 lg:text-left text-center">
                                         <Button
                                             type="submit"
-                                            label="Envoyer"
+                                            label={isSubmitting ? 'Envoi...' : 'Envoyer'}
                                             className="rounded-full !py-3 !px-8"
                                         />
                                     </div>
