@@ -23,10 +23,10 @@ export const headerPageLink: HeaderLinkType[] = [
         label: 'Pourquoi nous',
         href: '/#why',
     },
-    {
-        label: 'News',
-        href: '/news',
-    },
+    // {
+    //     label: 'News',
+    //     href: '/news',
+    // },
     {
         label: 'Contact',
         href: '/#contact',

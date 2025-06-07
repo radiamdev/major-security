@@ -4,7 +4,7 @@ import Logo from './icons/Logo'
 import { headerPageLink } from '@/constants'
 
 const contactInfo = [
-    '📍 12 Rue de la Sécurité, 75000 Paris, France',
+    '📍 IVG 106 Ankadifotsy Antananarivo',
     '📞 +261 37 79 118 84',
     '✉️ contact@majorsecurity.com',
     '🕒 Disponible 24h/24 – 7j/7',
