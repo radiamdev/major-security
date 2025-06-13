@@ -1,14 +1,54 @@
+'use client'
+import { useRef } from 'react'
 import Container from '../common/Container'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default function AboutUS() {
+    const aboutSection = useRef(null)
+    const statsSection = useRef(null)
+
+    useGSAP(() => {
+        // Animation du bloc principal "about"
+        gsap.fromTo(
+            '.about-us-one',
+            { opacity: 0, y: 100 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: '.about-us-one',
+                    start: 'top 80%',
+                },
+            }
+        )
+
+        // Animation du bloc avec le pourcentage
+        gsap.fromTo(
+            '.about-two',
+            { opacity: 0, y: 100 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: '.about-two',
+                    start: 'top 80%',
+                },
+            }
+        )
+    }, [])
+
     return (
-        <div className="w-screen h-fit ">
-            <Container
-                tag="section"
-                id="about"
-                className=" pt-16"
-            >
-                <section className="about-us px-6 lg:px-20">
+        <div className="w-screen h-fit">
+            <Container tag="section" id="about" className="pt-16">
+                <section className="about-us px-6 lg:px-20" ref={aboutSection}>
                     <div className="about-us-one flex flex-col lg:flex-row-reverse items-center justify-between">
                         <div className="about-us-left w-full lg:w-[50%] flex justify-center">
                             <img
@@ -44,7 +84,10 @@ export default function AboutUS() {
                         </div>
                     </div>
 
-                    <div className="about-two flex flex-col lg:flex-row items-stretch justify-between gap-5 lg:gap-0 mt-5 lg:mt-0">
+                    <div
+                        className="about-two flex flex-col lg:flex-row items-stretch justify-between gap-5 lg:gap-0 mt-5 lg:mt-0"
+                        ref={statsSection}
+                    >
                         <div className="about-two-left flex flex-col lg:flex-row-reverse w-full lg:w-[50%] gap-0">
                             <div className="left-two w-full lg:w-[50%] flex justify-center items-center p-0">
                                 <img

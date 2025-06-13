@@ -1,12 +1,38 @@
+'use client'
+
 import Container from "../common/Container"
 import Icon from "../icons"
 import Button from "../common/Button"
 import Link from "next/link"
+import { useRef } from "react"
+import { useGSAP } from "@gsap/react"
+import gsap from "gsap"
 
 function Hero() {
+  const container = useRef<HTMLDivElement>(null)
+
+  useGSAP(() => {
+    const tl = gsap.timeline()
+
+    tl.from(container.current?.children[0].children as HTMLCollection, {
+      opacity: 0,
+      yPercent: 20,
+      stagger: .5,
+      duration: 1,
+      ease: 'power2.out'
+    })
+      .from(container.current?.children[1].children as HTMLCollection, {
+        opacity: 0,
+        yPercent: 20,
+        stagger: .5,
+        duration: 1,
+        ease: 'power2.out'
+      }, "-=1")
+  }, [])
+
   return (
     <div id="home" className=" w-screen bg-[#09161EED] pt-[160px] md:pt-[180px] lg:pt-[50px] pb-10 " >
-      <Container tag="section" className=" min-h-[70vh] text-white flex flex-col lg:flex-row pb-10 " >
+      <Container ref={container} tag="section" className=" min-h-[70vh] text-white flex flex-col lg:flex-row pb-10 " >
         <div className=" w-full flex flex-col justify-center gap-10 xl:gap-40" >
           <h1 className="w-full items-start text-5xl md:text-8xl max-w-[550px] font-semibold font-manrope flex flex-col gap-5" >
             <p className="text-base font-normal" >Sécurité, Surveillance & Gardiennage</p>
