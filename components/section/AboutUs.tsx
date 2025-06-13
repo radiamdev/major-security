@@ -4,6 +4,8 @@ import Container from '../common/Container'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Link from 'next/link'
+import Button from '../common/Button'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -58,11 +60,8 @@ export default function AboutUS() {
                             />
                         </div>
                         <div className="about-us-two w-full lg:w-[50%] text-center lg:text-left">
-                            <span className="text-lg font-bold hidden lg:block">
-                                A Propos de nous
-                            </span>
                             <div className="text-4xl lg:w-82 font-bold my-2 leading-relaxed">
-                                A PROPOS DE MAJOR SECURITY
+                                A PROPOS
                             </div>
                             <div className="text-[#7B7B7B] lg:w-[500px] text-base lg:text-lg my-6 leading-relaxed">
                                 Chez MAJOR SECURITY, notre objectif est de
@@ -73,14 +72,7 @@ export default function AboutUS() {
                                 à tous vos besoins en matière de sécurité et de
                                 contrôle.
                             </div>
-                            <div className="mt-4">
-                                <a
-                                    href="#"
-                                    className="bg-[#F9C839] text-black font-bold p-3 rounded-xl inline-block"
-                                >
-                                    Contactez-nous
-                                </a>
-                            </div>
+                            <Link href={'#contact'}> <Button label="Contactez Nous" /></Link>
                         </div>
                     </div>
 

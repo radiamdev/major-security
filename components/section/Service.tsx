@@ -4,6 +4,8 @@ import Container from '../common/Container'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
+import Link from 'next/link'
+import Button from '../common/Button'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -63,14 +65,12 @@ export default function ServicePage() {
     <div className="bg-gray-primary mt-16">
       <Container tag="section" id="service" className="bg-gray-primary py-16">
         <div className="text-black px-6 md:px-20 py-16">
-          <p className="text-sm text-gray-500">Nos services</p>
+          {/* <p className="text-sm text-gray-500">Nos services</p> */}
 
           <div className="flex flex-col md:flex-row md:justify-between gap-6 mb-12">
             <div className="md:w-1/2">
               <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                NOS SERVICES CHEZ
-                <br />
-                MAJOR SECURITY
+                NOS SERVICES
               </h1>
             </div>
 
@@ -81,9 +81,7 @@ export default function ServicePage() {
                 des entreprises et des événements.
               </p>
               <div className="flex justify-end">
-                <button className="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded font-semibold">
-                  Contactez-nous
-                </button>
+                <Link href={'#contact'}> <Button label="Contactez Nous" /></Link>
               </div>
             </div>
           </div>
