@@ -1,14 +1,56 @@
+'use client'
+import { useRef } from 'react'
 import Container from '../common/Container'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Link from 'next/link'
+import Button from '../common/Button'
+
+gsap.registerPlugin(ScrollTrigger)
 
 export default function AboutUS() {
+    const aboutSection = useRef(null)
+    const statsSection = useRef(null)
+
+    useGSAP(() => {
+        // Animation du bloc principal "about"
+        gsap.fromTo(
+            '.about-us-one',
+            { opacity: 0, y: 100 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: '.about-us-one',
+                    start: 'top 80%',
+                },
+            }
+        )
+
+        // Animation du bloc avec le pourcentage
+        gsap.fromTo(
+            '.about-two',
+            { opacity: 0, y: 100 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: '.about-two',
+                    start: 'top 80%',
+                },
+            }
+        )
+    }, [])
+
     return (
-        <div className="w-screen h-fit ">
-            <Container
-                tag="section"
-                id="about"
-                className=" pt-16"
-            >
-                <section className="about-us px-6 lg:px-20">
+        <div className="w-screen h-fit">
+            <Container tag="section" id="about" className="pt-16">
+                <section className="about-us px-6 lg:px-20" ref={aboutSection}>
                     <div className="about-us-one flex flex-col lg:flex-row-reverse items-center justify-between">
                         <div className="about-us-left w-full lg:w-[50%] flex justify-center">
                             <img
@@ -18,11 +60,8 @@ export default function AboutUS() {
                             />
                         </div>
                         <div className="about-us-two w-full lg:w-[50%] text-center lg:text-left">
-                            <span className="text-lg font-bold hidden lg:block">
-                                A Propos de nous
-                            </span>
                             <div className="text-4xl lg:w-82 font-bold my-2 leading-relaxed">
-                                A PROPOS DE MAJOR SECURITY
+                                A PROPOS
                             </div>
                             <div className="text-[#7B7B7B] lg:w-[500px] text-base lg:text-lg my-6 leading-relaxed">
                                 Chez MAJOR SECURITY, notre objectif est de
@@ -33,18 +72,14 @@ export default function AboutUS() {
                                 à tous vos besoins en matière de sécurité et de
                                 contrôle.
                             </div>
-                            <div className="mt-4">
-                                <a
-                                    href="#"
-                                    className="bg-[#F9C839] text-black font-bold p-3 rounded-xl inline-block"
-                                >
-                                    Contactez-nous
-                                </a>
-                            </div>
+                            <Link href={'#contact'}> <Button label="Contactez Nous" /></Link>
                         </div>
                     </div>
 
-                    <div className="about-two flex flex-col lg:flex-row items-stretch justify-between gap-5 lg:gap-0 mt-5 lg:mt-0">
+                    <div
+                        className="about-two flex flex-col lg:flex-row items-stretch justify-between gap-5 lg:gap-0 mt-5 lg:mt-0"
+                        ref={statsSection}
+                    >
                         <div className="about-two-left flex flex-col lg:flex-row-reverse w-full lg:w-[50%] gap-0">
                             <div className="left-two w-full lg:w-[50%] flex justify-center items-center p-0">
                                 <img
