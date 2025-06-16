@@ -49,7 +49,7 @@ function Hero() {
           </div>
         </div>
 
-        <div className="flex flex-col place-items-end gap-5" >
+        <div className="flex flex-col items-center lg:place-items-end gap-5" >
           <img
             alt="hero image"
             src={"/images/hero-image.png"}
