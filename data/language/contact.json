@@ -1,0 +1,28 @@
+{
+    "fr": {
+        "contactUsSection": {
+            "title": "Contactez nous",
+            "description1": "Besoin d'un plan de sécurité personnalisé ?",
+            "description2": "Parlons de vos besoins !",
+            "name": "Nom",
+            "email": "Email",
+            "subject": "Sujet",
+            "message": "Message",
+            "send": "Envoyer",
+            "sending": "Envoi en cours..."
+        }
+    },
+    "en": {
+        "contactUsSection": {
+            "title": "Contact us",
+            "description1": "Need a personalized security plan ?",
+            "description2": "Talk to us !",
+            "name": "Name",
+            "email": "Email",
+            "subject": "Subject",
+            "message": "Message",
+            "send": "Send",
+            "sending": "Sending..."
+        }
+    }
+}

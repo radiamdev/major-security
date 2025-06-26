@@ -14,6 +14,8 @@ import FormField from '../common/FormField'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
+import useTranslate from '@/lib/hooks/useTranslate'
+import lang from '@/data/language/contact.json'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -22,6 +24,8 @@ const ContactUs = () => {
 
     const imageRef = useRef(null)
     const maskRef = useRef(null)
+
+    const t = useTranslate(lang)
 
     useGSAP(() => {
         if (!imageRef.current || !maskRef.current) return
@@ -43,11 +47,18 @@ const ContactUs = () => {
 
     return (
         <div className="w-screen h-fit bg-gray-primary">
-            <Container tag="section" id="contact" className="bg-gray-primary pt-16">
+            <Container
+                tag="section"
+                id="contact"
+                className="bg-gray-primary pt-16"
+            >
                 <div className="flex lg:flex-row flex-col items-start bg-blue-primary gap-8 pt-16 pb-32">
                     {/* Image avec animation de masque */}
                     <div className="lg:w-1/2 w-full flex items-center justify-center">
-                        <div ref={imageRef} className="relative w-80 h-auto overflow-hidden">
+                        <div
+                            ref={imageRef}
+                            className="relative w-80 h-auto overflow-hidden"
+                        >
                             {/* Masque animé */}
                             <div
                                 ref={maskRef}
@@ -66,10 +77,12 @@ const ContactUs = () => {
                     <div className="lg:w-1/2 w-full">
                         <div className="space-y-4 text-center lg:text-left">
                             <p className="text-white">Contact</p>
-                            <h1 className="text-white text-3xl">Contactez nous</h1>
+                            <h1 className="text-white text-3xl">
+                                {t('contactUsSection.title')}
+                            </h1>
                             <p className="text-white leading-8">
-                                Besoin d&apos;un plan de sécurité personnalisé ? <br />
-                                Parlons de vos besoins !
+                                {t('contactUsSection.description1')} <br />
+                                {t('contactUsSection.description2')}
                             </p>
                         </div>
 
@@ -90,14 +103,19 @@ const ContactUs = () => {
 
                                 setIsSubmitting(true)
                                 try {
-                                    const response = await sendMail(values).send()
-                                    toast.success('Your message has been sent successfully!')
-                                    console.log("success", response)
+                                    const response =
+                                        await sendMail(values).send()
+                                    toast.success(
+                                        'Your message has been sent successfully!'
+                                    )
+                                    console.log('success', response)
 
                                     resetForm()
                                 } catch (error) {
-                                    toast.error('Failed to send message. Please try again.')
-                                    console.log("error", error)
+                                    toast.error(
+                                        'Failed to send message. Please try again.'
+                                    )
+                                    console.log('error', error)
                                 } finally {
                                     setIsSubmitting(false)
                                 }
@@ -107,25 +125,25 @@ const ContactUs = () => {
                                 <Form className="py-6 flex flex-col items-center lg:items-start justify-center gap-6">
                                     <FormField
                                         name="name"
-                                        placeholder="Nom"
+                                        placeholder={t('contactUsSection.name')}
                                         touched={touched.name}
                                         error={errors.name}
                                     />
                                     <FormField
                                         name="email"
-                                        placeholder="Email"
+                                        placeholder={t('contactUsSection.email')}
                                         touched={touched.email}
                                         error={errors.email}
                                     />
                                     <FormField
                                         name="subject"
-                                        placeholder="Sujet"
+                                        placeholder={t('contactUsSection.subject')}
                                         touched={touched.subject}
                                         error={errors.subject}
                                     />
                                     <FormField
                                         name="message"
-                                        placeholder="Message"
+                                        placeholder={t('contactUsSection.message')}
                                         isTextarea
                                         touched={touched.message}
                                         error={errors.message}
@@ -144,7 +162,11 @@ const ContactUs = () => {
                                     <div className="flex-1 lg:text-left text-center">
                                         <Button
                                             type="submit"
-                                            label={isSubmitting ? 'Envoi...' : 'Envoyer'}
+                                            label={
+                                                isSubmitting
+                                                    ? t('contactUsSection.sending')
+                                                    : t('contactUsSection.send')
+                                            }
                                             className="rounded-full !py-3 !px-8"
                                         />
                                     </div>
