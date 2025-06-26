@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import Container from '../../common/Container'
 import Icon from '../../icons'
-import Button from '../../common/Button'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import useTranslate from '@/lib/hooks/useTranslate'
@@ -25,7 +24,7 @@ const HeroForMobileScreen = () => {
             shieldRef.current,
             { opacity: 0, scale: 0.8, y: 50 },
             { opacity: 1, scale: 1, y: 0, duration: 1, ease: 'power2.out' }
-        )
+        );
 
         // 2. Animation MAJOR depuis la gauche
         tl.fromTo(
@@ -33,7 +32,7 @@ const HeroForMobileScreen = () => {
             { x: -100, opacity: 0 },
             { x: 0, opacity: 1, duration: 1.2, ease: 'power3.out' },
             '-=0.3'
-        )
+        ); 
 
         // 3. Animation SECURITY depuis la droite
         tl.fromTo(
@@ -41,7 +40,7 @@ const HeroForMobileScreen = () => {
             { x: 100, opacity: 0 },
             { x: 0, opacity: 1, duration: 1.2, ease: 'power3.out' },
             '-=0.8'
-        )
+        );
 
         // 4. Animation de la description
         tl.fromTo(
@@ -49,7 +48,7 @@ const HeroForMobileScreen = () => {
             { y: 30, opacity: 0 },
             { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out' },
             '-=0.5'
-        )
+        );
 
         // 5. Animation des stats
         tl.fromTo(
@@ -57,7 +56,7 @@ const HeroForMobileScreen = () => {
             { y: 30, opacity: 0 },
             { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out' },
             '-=0.6'
-        )
+        );
 
         // 6. Animation des boutons
         tl.fromTo(
@@ -65,7 +64,7 @@ const HeroForMobileScreen = () => {
             { y: 30, opacity: 0 },
             { y: 0, opacity: 1, duration: 0.8, ease: 'power2.out' },
             '-=0.4'
-        )
+        );
     }, [])
 
     // Translation

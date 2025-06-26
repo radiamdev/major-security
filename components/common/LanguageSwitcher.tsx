@@ -3,8 +3,6 @@
 import { useLanguageStore } from '@/lib/store/useLanguageStore'
 import React, { useState } from 'react'
 import { MdKeyboardArrowDown } from 'react-icons/md'
-import en from '/icons/en.png'
-import fr from '/icons/fr.png'
 
 const LanguageSwitcher = () => {
     const [opened, setOpened] = useState(false)
@@ -29,11 +27,13 @@ const LanguageSwitcher = () => {
                 }`}
             >
                 {/* Option Anglais */}
-                <p
+
+                <button
                     onClick={() => {
-                        ;(setLocale('en'), setOpened(false))
+                        setLocale('en')
+                        setOpened(false)
                     }}
-                    className="w-full py-2 hover:bg-primary transition-colors rounded-md px-1 flex items-center gap-2"
+                    className="w-full py-2 hover:bg-primary transition-colors rounded-md cursor-pointer px-1 flex items-center gap-2"
                 >
                     <img
                         src="/icons/en.png"
@@ -41,13 +41,15 @@ const LanguageSwitcher = () => {
                         className="w-5 h-5"
                     />
                     English
-                </p>
+                </button>
                 {/* Option Français */}
-                <p
+
+                <button
                     onClick={() => {
-                        ;(setLocale('fr'), setOpened(false))
+                        setLocale('fr')
+                        setOpened(false)
                     }}
-                    className="w-full py-2 hover:bg-primary transition-colors rounded-md px-1 flex items-center gap-2"
+                    className="w-full py-2 hover:bg-primary transition-colors rounded-md cursor-pointer px-1 flex items-center gap-2"
                 >
                     <img
                         src="/icons/fr.png"
@@ -55,7 +57,7 @@ const LanguageSwitcher = () => {
                         className="w-5 h-5"
                     />
                     Français
-                </p>
+                </button>
             </div>
         </div>
     )
