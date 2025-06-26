@@ -72,7 +72,7 @@ export default function AboutUS() {
                                 à tous vos besoins en matière de sécurité et de
                                 contrôle.
                             </div>
-                            <Link href={'#contact'}> <Button label="Contactez Nous" /></Link>
+                            <Link href={'/contact-us'}> <Button label="Contactez Nous" /></Link>
                         </div>
                     </div>
 

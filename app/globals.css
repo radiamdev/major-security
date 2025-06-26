@@ -1,8 +1,5 @@
 @import 'tailwindcss';
 
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-
 :root {
     --background: #ffffff;
     --foreground: #171717;
@@ -14,6 +11,38 @@
 html,
 body {
     @apply overflow-x-hidden scroll-smooth;
+}
+
+@font-face {
+    font-family: "Swap";
+    src: url("https://db.onlinewebfonts.com/t/a95213845ae87f1b0515b5eec0fd074a.eot");
+    src: url("https://db.onlinewebfonts.com/t/a95213845ae87f1b0515b5eec0fd074a.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/a95213845ae87f1b0515b5eec0fd074a.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/a95213845ae87f1b0515b5eec0fd074a.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/a95213845ae87f1b0515b5eec0fd074a.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/a95213845ae87f1b0515b5eec0fd074a.svg#Swap")format("svg");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.eot");
+    src: url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/5fc6f4fd75e944a52a342ab2c7f100f1.svg#Montserrat")format("svg");
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.swap {
+    font-family: 'Swap';
+    font-weight: 700;
+    font-style: normal;
 }
 
 @theme {

@@ -29,7 +29,7 @@ export const headerPageLink: HeaderLinkType[] = [
     // },
     {
         label: 'Contact',
-        href: '/#contact',
+        href: '/contact-us',
     },
 ]
 

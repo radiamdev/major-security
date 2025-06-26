@@ -1,0 +1,22 @@
+{
+    "fr": {
+        "header": {
+            "home": "Accueil",
+            "about": "Qui sommes-nous?",
+            "services": "Nos services",
+            "whyUs": "Pourquoi nous choisir ?",
+            "news": "Actualités",
+            "contact": "Nous contacter"
+        }
+    },
+    "en": {
+        "header": {
+            "home": "Home",
+            "about": "About Us",
+            "services": "Nos Services",
+            "whyUs": "Why choose us ?",
+            "news": "News",
+            "contact": "Contact Us"
+        }
+    }
+}

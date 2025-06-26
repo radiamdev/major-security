@@ -81,7 +81,7 @@ export default function ServicePage() {
                 des entreprises et des événements.
               </p>
               <div className="flex justify-end">
-                <Link href={'#contact'}> <Button label="Contactez Nous" /></Link>
+                <Link href={'/contact-us'}> <Button label="Contactez Nous" /></Link>
               </div>
             </div>
           </div>

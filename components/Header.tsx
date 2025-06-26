@@ -1,24 +1,58 @@
 'use client'
+
 import Link from 'next/link'
 import React, { useRef, useState } from 'react'
 
 import Container from './common/Container'
 import Logo from './icons/Logo'
 import Menu from './icons/Menu'
-import { useClickOutSide } from '@/hooks/useClickOutSide'
+import { useClickOutSide } from '@/lib/hooks/useClickOutSide'
 import Infos from './display/Infos'
-import { headerPageLink, headerSocialMediaLink } from '@/constants'
+import LanguageSwitcher from './common/LanguageSwitcher'
+import { HeaderLinkType } from '@/type'
+import SocialMedia from './common/SocialMedia'
+import useTranslate from '@/lib/hooks/useTranslate'
+import lang from '@/data/language/global.json'
 
 const Header = () => {
     const [isNavDisplayed, setIsNavDisplayed] = useState<boolean>(false)
     const navigationRef = useRef<HTMLDivElement | null>(null)
     useClickOutSide(navigationRef, () => setIsNavDisplayed(false))
 
+    const t = useTranslate(lang)
+
+    const headerPageLink: HeaderLinkType[] = [
+        {
+            label: t('header.home'),
+            href: '/',
+        },
+        {
+            label: t('header.about'),
+            href: '/#about',
+        },
+        {
+            label: t('header.services'),
+            href: '/#service',
+        },
+        {
+            label: t('header.whyUs'),
+            href: '/#why',
+        },
+        // {
+        //     label: t('header.news'),
+        //     href: '/news',
+        // },
+        {
+            label: t('header.contact'),
+            href: '/contact-us',
+        },
+    ]
+
     return (
         <div className="w-screen h-fit fixed top-0 left-0 lg:static bg-foreground z-50 ">
             <Container
                 tag="header"
-                className="bg-foreground text-white pb-4 flex flex-col gap-2 md:gap-5 xl:gap-10"
+                className="bg-blue-primary text-white pb-4 flex flex-col gap-2 md:gap-5 xl:gap-10"
             >
                 <div className="w-full flex justify-between items-center border-b border-b-[#2A2A2A] ">
                     <Logo className="w-[60px] md:w-[70px]" />
@@ -40,13 +74,13 @@ const Header = () => {
                 <div className="flex items-center justify-between">
                     <div ref={navigationRef}>
                         <ul
-                            className={`absolute top-full left-0 bg-foreground flex-col p-5 md:p-8 flex items-center justify-center gap-5 text-sm ${isNavDisplayed ? 'left-0' : 'left-[-100%]'} transition-all duration-300 lg:static lg:flex-row lg:p-0`}
+                            className={`absolute top-full left-0 bg-blue-primary flex-col p-5 md:p-8 flex items-center justify-center gap-5 text-sm ${isNavDisplayed ? 'left-0' : 'left-[-100%]'} transition-all duration-300 lg:static lg:flex-row lg:p-0`}
                         >
                             {headerPageLink.map((link) => (
                                 <li key={link.href}>
                                     <Link
                                         href={link.href}
-                                        className="hover:text-primary transition-colors duration-300"
+                                        className="text-lg font-lario hover:text-primary transition-colors duration-300"
                                         onClick={() => setIsNavDisplayed(false)}
                                     >
                                         {link.label}
@@ -59,24 +93,10 @@ const Header = () => {
                             onClick={() => setIsNavDisplayed(!isNavDisplayed)}
                         />
                     </div>
-                    <ul className="flex items-center justify-center gap-3 md:gap-5 text-sm">
-                        {headerSocialMediaLink.map((link) => {
-                            const IconComponent = link.icon
-                            return (
-                                <li key={link.id}>
-                                    <Link
-                                        href={link.href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center justify-center w-8 h-auto aspect-square bg-black/60 hover:bg-primary text-white duration-300 transition-colors"
-                                        aria-label={link.label}
-                                    >
-                                        <IconComponent size={link.size ?? 20} />
-                                    </Link>
-                                </li>
-                            )
-                        })}
-                    </ul>
+                    {/* Social media links */}
+                    <SocialMedia />
+                    {/* LanguageSwitcher */}
+                    <LanguageSwitcher />{' '}
                 </div>
             </Container>
         </div>

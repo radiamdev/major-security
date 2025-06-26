@@ -1,11 +1,11 @@
-import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import AboutUS from '@/components/section/AboutUs'
-import ContactUs from '@/components/section/ContactUs'
-import Hero from '@/components/section/Hero'
+import Footer from '@/components/Footer'
+import AboutUS from '@/components/sections/AboutUs'
+import ContactUs from '@/components/sections/ContactUs'
+import Hero from '@/components/sections/Hero'
 // import LastNews from '@/components/section/LastNews'
-import ServicePage from '@/components/section/Service'
-import WhyPage from '@/components/section/Why'
+import ServicePage from '@/components/sections/Service'
+import WhyPage from '@/components/sections/Why'
 
 export default function Home() {
     return (
