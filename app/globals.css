@@ -1,8 +1,5 @@
 @import 'tailwindcss';
 
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
-
 :root {
     --background: #ffffff;
     --foreground: #171717;
@@ -13,7 +10,78 @@
 
 html,
 body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    max-width: 100vw;
     @apply overflow-x-hidden scroll-smooth;
+}
+
+@font-face {
+    font-family: 'Swap';
+    src: url('https://db.onlinewebfonts.com/t/a95213845ae87f1b0515b5eec0fd074a.eot');
+    src:
+        url('https://db.onlinewebfonts.com/t/a95213845ae87f1b0515b5eec0fd074a.eot?#iefix')
+            format('embedded-opentype'),
+        url('https://db.onlinewebfonts.com/t/a95213845ae87f1b0515b5eec0fd074a.woff2')
+            format('woff2'),
+        url('https://db.onlinewebfonts.com/t/a95213845ae87f1b0515b5eec0fd074a.woff')
+            format('woff'),
+        url('https://db.onlinewebfonts.com/t/a95213845ae87f1b0515b5eec0fd074a.ttf')
+            format('truetype'),
+        url('https://db.onlinewebfonts.com/t/a95213845ae87f1b0515b5eec0fd074a.svg#Swap')
+            format('svg');
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('https://db.onlinewebfonts.com/t/35af6dbe749b9704f03282e5a5949253.eot');
+    src:
+        url('https://db.onlinewebfonts.com/t/35af6dbe749b9704f03282e5a5949253.eot?#iefix')
+            format('embedded-opentype'),
+        url('https://db.onlinewebfonts.com/t/35af6dbe749b9704f03282e5a5949253.woff2')
+            format('woff2'),
+        url('https://db.onlinewebfonts.com/t/35af6dbe749b9704f03282e5a5949253.woff')
+            format('woff'),
+        url('https://db.onlinewebfonts.com/t/35af6dbe749b9704f03282e5a5949253.ttf')
+            format('truetype'),
+        url('https://db.onlinewebfonts.com/t/35af6dbe749b9704f03282e5a5949253.svg#Rubik')
+            format('svg');
+}
+
+@font-face {
+    font-family: 'Manrope ExtraBold';
+    src: url('https://db.onlinewebfonts.com/t/f949806ee0855380b8e1ac3bf9295548.eot');
+    src:
+        url('https://db.onlinewebfonts.com/t/f949806ee0855380b8e1ac3bf9295548.eot?#iefix')
+            format('embedded-opentype'),
+        url('https://db.onlinewebfonts.com/t/f949806ee0855380b8e1ac3bf9295548.woff2')
+            format('woff2'),
+        url('https://db.onlinewebfonts.com/t/f949806ee0855380b8e1ac3bf9295548.woff')
+            format('woff'),
+        url('https://db.onlinewebfonts.com/t/f949806ee0855380b8e1ac3bf9295548.ttf')
+            format('truetype'),
+        url('https://db.onlinewebfonts.com/t/f949806ee0855380b8e1ac3bf9295548.svg#Manrope ExtraBold')
+            format('svg');
+}
+
+* {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: large;
+}
+
+.font-swap {
+    font-family: 'Swap';
+    font-weight: 700;
+    font-style: normal;
+}
+
+.font-manrop-bold {
+    font-family: 'Manrope ExtraBold';
+    font-weight: 900;
+    font-style: normal;
 }
 
 @theme {

@@ -1,0 +1,16 @@
+{
+    "fr": {
+        "title": "A PROPOS DE NOUS",
+        "description1": "Chez MAJOR SECURITY, notre objectif est de   garantir la sécurité de votre entreprise, quelle que soit sa taille. Nous mettons à votre  disposition une équipe d&apos;agents formés,  qualifiés et expérimentés, capables de répondre  à tous vos besoins en matière de sécurité et de  contrôle.",
+        "contactUs": "Contactez Nous",
+        "clients": "Clients Satisfaits",
+        "description2": "Nous travaillons en étroite collaboration avec chaque client pour proposer une prestation sur  mesure, en tenant compte de vos exigences, de  vos contraintes et de la spécificité de votre activité."
+    },
+    "en": {
+        "title": "ABOUT US",
+        "description1": "At MAJOR SECURITY, our goal is to ensure the security of your business, whatever its size. We offer you a team of trained and experienced agents, able to meet all your security and control needs.",
+        "contactUs": "Contact Us",
+        "clients": "Satisfied Clients",
+        "description2": "We work closely with each client to propose a personalized service, taking into account your needs, constraints and the specificity of your activity."
+    }
+}

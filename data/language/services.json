@@ -1,0 +1,28 @@
+{
+    "fr": {
+        "title": "NOS SERVICES",
+        "description": "Chez MAJOR SECURITY, nous proposons une large  gamme de services de sécurité adaptés aux    besoins spécifiques des professionnels, des entreprises et des événements.",
+        "contactUs": "Contactez Nous",
+        "title1": "Gardiennage de chantier",
+        "description1": "Notre service de gardiennage assure la sécurité, la surveillance et le contrôle de vos chantiers afin d’éviter toute intrusion, vol ou détérioration des équipements.",
+        "title2": "Sécurité Incendie",
+        "description2": "Notre agent est expérimenté et formé aux risques incendies, pour assurer la sécurité de votre personnel et du public.",
+        "title3": "Technologie / Système",
+        "description3": "Nous fournissons des services de sécurité via des systèmes technologiques pour assurer la protection de votre entreprise, de vos biens et de vos collaborateurs.",
+        "title4": "Sécurité Événementielle",
+        "description4": "Notre équipe spécialisée en sécurisation intervient sur tous types de manifestations pour des événements bien organisés et réussis."
+    },
+    "en": {
+        "title": "OUR SERVICES",
+        "description": "At MAJOR SECURITY, we offer a wide range of security services tailored to the specific needs of professionals, businesses, and events.",
+        "contactUs": "Contact Us",
+        "title1": "Site Guard",
+        "description1": "Our site guard service ensures security, surveillance, and control of your site to prevent any intrusion, theft, or damage to equipment.",
+        "title2": "Fire Safety",
+        "description2": "Our experienced and trained fire safety agent ensures the safety of your personnel and the public.",
+        "title3": "Technology / System",
+        "description3": "We provide security services through technological systems to ensure the protection of your business, property, and employees.",
+        "title4": "Event Security",
+        "description4": "Our specialized event security team intervenes on all types of events for well-organized and successful events."
+    }
+}

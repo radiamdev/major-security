@@ -1,12 +1,7 @@
 import type { Metadata } from 'next'
-import { Poppins } from 'next/font/google'
 import './globals.css'
 import { Bounce, ToastContainer } from 'react-toastify'
-
-const poppins = Poppins({
-    weight: '400',
-    subsets: ['latin'],
-})
+import ScrollToTopButton from '@/components/common/ScrollToTopButton'
 
 export const metadata: Metadata = {
     title: 'Major Security | Sécurité pour entreprises, biens et événements',
@@ -37,8 +32,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="fr-FR">
-            <body className={`${poppins.className} antialiased`}>
+            <body className={`antialiased`}>
                 {children}
+                <ScrollToTopButton />
                 <ToastContainer
                     position="bottom-right"
                     autoClose={5000}

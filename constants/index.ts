@@ -2,36 +2,9 @@ import { HeaderLinkType, SocialMediaLink } from '@/type'
 import { FaFacebook, FaEnvelope, FaMapMarked } from 'react-icons/fa'
 
 export const images = {
-    logo: '/images/logo.png',
-    contactUsIllustration: '/images/contact_us_illustration.jpg',
+    logo: '/images/logo.webp',
+    contactUsIllustration: '/images/contact_us_illustration.webp',
 }
-
-export const headerPageLink: HeaderLinkType[] = [
-    {
-        label: 'Accueil',
-        href: '/',
-    },
-    {
-        label: 'A propos de nous ',
-        href: '/#about',
-    },
-    {
-        label: 'Nos services',
-        href: '/#service',
-    },
-    {
-        label: 'Pourquoi nous',
-        href: '/#why',
-    },
-    // {
-    //     label: 'News',
-    //     href: '/news',
-    // },
-    {
-        label: 'Contact',
-        href: '/#contact',
-    },
-]
 
 // Données des liens de médias sociaux
 export const headerSocialMediaLink: SocialMediaLink[] = [

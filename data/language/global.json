@@ -1,0 +1,40 @@
+{
+    "fr": {
+        "header": {
+            "home": "Accueil",
+            "about": "Qui sommes-nous?",
+            "services": "Nos services",
+            "whyUs": "Pourquoi nous choisir ?",
+            "news": "Actualités",
+            "contact": "Nous contacter"
+        },
+        "footer": {
+            "subscribe": "Inscrivez vous",
+            "mail": "Entrez votre adresse mail",
+            "send": "Envoyer",
+            "description": "Chez Major Security, nous avons une mission claire : vous garantir une protection fiable, constante et adaptée à vos besoins, quelle que soit la taille de votre entreprise, l'envergure de votre projet ou la complexité du site à sécuriser.",
+            "quickLinks": "Liens rapide",
+            "contact": "Nous contacter",
+            "available": "Disponible"
+        }
+    },
+    "en": {
+        "header": {
+            "home": "Home",
+            "about": "About Us",
+            "services": "Nos Services",
+            "whyUs": "Why choose us ?",
+            "news": "News",
+            "contact": "Contact Us"
+        },
+        "footer": {
+            "subscribe": "Subscribe",
+            "mail": "Your email address",
+            "send": "Send",
+            "description": "At Major Security, we have a clear mission: to guarantee you reliable, consistent protection tailored to your needs, regardless of the size of your company, the scope of your project, or the complexity of the site to be secured.",
+            "quickLinks": "Quick links",
+            "contact": "Contact us",
+            "available": "Available"
+        }
+    }
+}
