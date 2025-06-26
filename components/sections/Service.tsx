@@ -39,25 +39,25 @@ export default function ServicePage() {
         {
             title: t('title1'),
             description: t('description1'),
-            image: '/images/chantier.png',
+            image: '/images/chantier.webp',
             alt: 'chantier',
         },
         {
             title: t('title2'),
             description: t('description2'),
-            image: '/images/incendie.png',
+            image: '/images/incendie.webp',
             alt: 'incendie',
         },
         {
             title: t('title3'),
             description: t('description3'),
-            image: '/images/cyber.png',
+            image: '/images/cyber.webp',
             alt: 'technologie',
         },
         {
             title: t('title4'),
             description: t('description4'),
-            image: '/images/evenement.png',
+            image: '/images/evenement.webp',
             alt: 'événement',
         },
     ]

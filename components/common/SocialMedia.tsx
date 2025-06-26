@@ -1,4 +1,4 @@
-import { headerPageLink, headerSocialMediaLink } from '@/constants'
+import { headerSocialMediaLink } from '@/constants'
 import Link from 'next/link'
 
 const SocialMedia = () => {

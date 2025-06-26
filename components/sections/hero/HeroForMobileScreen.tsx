@@ -82,7 +82,7 @@ const HeroForMobileScreen = () => {
                         <img
                             ref={shieldRef}
                             alt="hero image"
-                            src={'/images/hero-shield.png'}
+                            src={'/images/hero-shield.webp'}
                             className="w-48 h-auto opacity-0 select-none mb-4"
                         />
 

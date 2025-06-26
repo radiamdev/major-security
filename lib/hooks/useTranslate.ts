@@ -10,7 +10,12 @@ function resolveNestedKey(
     obj: TranslationJson,
     path: string
 ): TranslationValue | undefined {
-    return path.split('.').reduce((acc: any, key: string) => acc?.[key], obj)
+    return path.split('.').reduce((acc: unknown, key: string) => {
+        if (typeof acc === 'object' && acc !== null && key in acc) {
+            return (acc as TranslationJson)[key]
+        }
+        return undefined
+    }, obj as unknown) as TranslationValue | undefined
 }
 
 export default function useTranslate(json: {

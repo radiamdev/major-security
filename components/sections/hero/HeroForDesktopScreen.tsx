@@ -110,7 +110,7 @@ const HeroForDesktopScreen = () => {
                     <img
                         ref={shieldRef}
                         alt="hero image"
-                        src={'/images/hero-shield.png'}
+                        src={'/images/hero-shield.webp'}
                         className="w-48 md:w-80 h-auto z-50 opacity-0 animate-bouncing select-none"
                     />
 

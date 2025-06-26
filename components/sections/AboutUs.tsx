@@ -59,7 +59,7 @@ export default function AboutUS() {
                     <div className="about-us-one flex flex-col lg:flex-row-reverse items-center justify-between">
                         <div className="about-us-left w-full lg:w-[50%] flex justify-center">
                             <img
-                                src={'/images/majorsec.png'}
+                                src={'/images/majorsec.webp'}
                                 alt="major security logo"
                                 className="w-full h-auto object-cover"
                             />
@@ -82,7 +82,7 @@ export default function AboutUS() {
                         <div className="about-two-left flex flex-col lg:flex-row-reverse w-full lg:w-[50%] gap-0">
                             <div className="left-two w-full lg:w-[50%] flex justify-center items-center p-0">
                                 <img
-                                    src={'/images/security.png'}
+                                    src={'/images/security.webp'}
                                     alt="icon"
                                     className="w-full h-full object-cover"
                                 />
