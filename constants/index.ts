@@ -6,33 +6,6 @@ export const images = {
     contactUsIllustration: '/images/contact_us_illustration.jpg',
 }
 
-export const headerPageLink: HeaderLinkType[] = [
-    {
-        label: 'Accueil',
-        href: '/',
-    },
-    {
-        label: 'A propos de nous ',
-        href: '/#about',
-    },
-    {
-        label: 'Nos services',
-        href: '/#service',
-    },
-    {
-        label: 'Pourquoi nous',
-        href: '/#why',
-    },
-    // {
-    //     label: 'News',
-    //     href: '/news',
-    // },
-    {
-        label: 'Contact',
-        href: '/contact-us',
-    },
-]
-
 // Données des liens de médias sociaux
 export const headerSocialMediaLink: SocialMediaLink[] = [
     {
