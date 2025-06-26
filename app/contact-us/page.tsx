@@ -6,7 +6,9 @@ const ContactUsPage = () => {
     return (
         <main>
             <Header />
-            <div className='w-full h-40 lg:h-0'/>
+            {/* See the docs #1 */}
+            <div className="w-full h-40 lg:h-0" />
+
             <ContactUs />
             <Footer />
         </main>
@@ -14,3 +16,5 @@ const ContactUsPage = () => {
 }
 
 export default ContactUsPage
+
+// Docs #1: I make it here to have a top margin or space between header and section because the header is sticky so the section must have a top margin

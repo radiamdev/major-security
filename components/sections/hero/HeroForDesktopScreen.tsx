@@ -1,15 +1,15 @@
 "use client"
 
 import Link from 'next/link'
-import Container from '../common/Container'
-import Icon from '../icons'
-import Button from '../common/Button'
+import Container from '../../common/Container'
+import Icon from '../../icons'
+import Button from '../../common/Button'
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import useTranslate from '@/lib/hooks/useTranslate'
 import lang from '@/data/language/hero.json'
 
-const Hero = () => {
+const HeroForDesktopScreen = () => {
     const majorRef = useRef(null)
     const securityRef = useRef(null)
     const shieldRef = useRef(null)
@@ -115,7 +115,7 @@ const Hero = () => {
                     />
 
                     {/* Texte superposé */}
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
+                    <div className="absolute lg:top-1/2 top-0 lg:left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full">
                         <div className="text-center space-y-2 md:space-y-8">
                             {/* MAJOR */}
                             <h1
@@ -181,4 +181,4 @@ const Hero = () => {
     )
 }
 
-export default Hero
+export default HeroForDesktopScreen
