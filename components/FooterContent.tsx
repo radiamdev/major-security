@@ -49,7 +49,7 @@ const FooterContent = () => {
                     {t('footer.description')}
                 </p>
             </div>
-            <div className="space-y-6 lg:ml-32 sm:ml-8 ml-0">
+            <div className="space-y-6 lg:ml-32 sm:ml-8 ml-0 text-center">
                 <h2 className="text-white text-xl font-swap">{t('footer.quickLinks')}</h2>
                 <ul className="space-y-5">
                     {headerPageLink.map((link) => (
@@ -64,7 +64,7 @@ const FooterContent = () => {
                     ))}
                 </ul>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-6 text-center">
                 <h2 className="text-white text-xl font-swap">{t('footer.contact')}</h2>
                 <ul className="space-y-5">
                     {contactInfo.map((item) => (

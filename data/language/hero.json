@@ -1,0 +1,20 @@
+{
+    "fr": {
+        "description": "Notre mission est simple : garantir la sécurité de  votre entreprise, de vos biens et de vos événements, peu importe leur taille ou leur complexité.",
+        "clients": "Clients satisfaits",
+        "subtitle1": " Sécurité, Surveillance &",
+        "subtitle2": "Gardiennage",
+        "ourServices": "Nos Services",
+        "contactUs": "Contactez Nous",
+        "assurance": "Sécurité assurée"
+    },
+    "en": {
+        "description": "Our mission is simple: to guarantee the security of your company, your assets and your events, regardless of their size or complexity.",
+        "clients": "Satisfied Clients",
+        "subtitle1": "Security, Monitoring &",
+        "subtitle2": "Guarding",
+        "ourServices": "Our Services",
+        "contactUs": "Contact Us",
+        "assurance": "Security Guaranteed"
+    }
+}
