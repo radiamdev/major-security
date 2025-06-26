@@ -37,7 +37,7 @@ const Footer = () => {
                 </div>
                 {/* Inscrivez vous */}
                 <div className="flex lg:flex-row flex-col items-center justify-between gap-4 py-8 pt-24">
-                    <h3 className="text-2xl text-white">{t(('footer.subscribe'))}</h3>
+                    <h3 className="!text-2xl text-white">{t(('footer.subscribe'))}</h3>
                     <div className="flex items-center justify-center gap-4">
                         <Field className="w-56">
                             <Input

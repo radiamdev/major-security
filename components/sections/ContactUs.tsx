@@ -77,7 +77,7 @@ const ContactUs = () => {
                     <div className="lg:w-1/2 w-full">
                         <div className="space-y-4 text-center lg:text-left">
                             <p className="text-white">Contact</p>
-                            <h1 className="text-white text-3xl">
+                            <h1 className="text-white !text-3xl">
                                 {t('contactUsSection.title')}
                             </h1>
                             <p className="text-white leading-8">
