@@ -52,9 +52,9 @@ const Header = () => {
         <div className="w-screen h-fit fixed top-0 left-0 lg:static bg-foreground z-50 ">
             <Container
                 tag="header"
-                className="bg-blue-primary text-white pb-4 flex flex-col gap-2 md:gap-5 xl:gap-10"
+                className="bg-blue-primary text-white pb-4 flex flex-col gap-4 xl:gap-4"
             >
-                <div className="w-full flex justify-between items-center border-b border-b-[#2A2A2A] ">
+                <div className="w-full flex justify-between items-center border-b border-b-[#2A2A2A]">
                     <Logo className="w-[60px] md:w-[70px]" />
                     <div className="flex items-center justify-center gap-[22px]">
                         <Infos
@@ -95,6 +95,7 @@ const Header = () => {
                     </div>
                     {/* Social media links */}
                     <SocialMedia />
+
                     {/* LanguageSwitcher */}
                     <LanguageSwitcher />{' '}
                 </div>

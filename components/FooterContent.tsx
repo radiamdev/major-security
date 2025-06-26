@@ -51,7 +51,7 @@ const FooterContent = () => {
             </div>
             <div className="space-y-6 lg:ml-32 sm:ml-8 ml-0">
                 <h2 className="text-white text-xl font-swap">{t('footer.quickLinks')}</h2>
-                <ul className="space-y-6">
+                <ul className="space-y-5">
                     {headerPageLink.map((link) => (
                         <li key={link.label}>
                             <Link
@@ -66,7 +66,7 @@ const FooterContent = () => {
             </div>
             <div className="space-y-6">
                 <h2 className="text-white text-xl font-swap">{t('footer.contact')}</h2>
-                <ul className="space-y-6">
+                <ul className="space-y-5">
                     {contactInfo.map((item) => (
                         <li key={item} className="text-white">
                             {item}
