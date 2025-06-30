@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import Link from 'next/link'
 import Container from '../../common/Container'
@@ -68,7 +68,9 @@ const HeroForDesktopScreen = () => {
     const t = useTranslate(lang)
 
     return (
-        <div id="home" className="w-screen bg-white">
+        <div id="home" className="relative w-screen h-auto overflow-hidden">
+            
+
             <Container
                 tag="section"
                 className="py-8 md:py-16 relative min-h-screen"
@@ -98,8 +100,8 @@ const HeroForDesktopScreen = () => {
                             </p>
                         </div>
                         <p className="!text-sm md:!text-lg !font-semibold text-black text-center">
-                           {t('subtitle1')} <br />
-                             {t('subtitle2')}
+                            {t('subtitle1')} <br />
+                            {t('subtitle2')}
                         </p>
                     </div>
                 </div>
@@ -109,7 +111,7 @@ const HeroForDesktopScreen = () => {
                     {/* Image du bouclier */}
                     <img
                         ref={shieldRef}
-                        alt="hero image"
+                        alt="hero illustration"
                         src={'/images/hero-shield.webp'}
                         className="w-48 md:w-80 h-auto z-50 opacity-0 animate-bouncing select-none"
                     />

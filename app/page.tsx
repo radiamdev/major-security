@@ -8,10 +8,12 @@ import WhyPage from '@/components/sections/Why'
 import HeroForDesktopScreen from '@/components/sections/hero/HeroForDesktopScreen'
 import HeroForMobileScreen from '@/components/sections/hero/HeroForMobileScreen'
 import ScrollingBanner from '@/components/sections/ScrollingBanner'
+import VideoLauncherWithModal from '@/components/VideoLauncherWithModal'
 
 export default function Home() {
     return (
         <main className="scroll-smooth">
+            <VideoLauncherWithModal />
             <Header />
             {/* See the docs #1 */}
             <div className="w-full h-40 lg:h-0" />
